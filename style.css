@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-bg: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Outfit", serif;
+    background-color: var(--very-dark-blue-bg);
+    color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 14px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    background-color: var(--Very-dark-blue-card);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+.card__image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.image_container {
+    position: relative;
+}
+
+.image_container::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 98%;
+    /* background-color: var(--Cyan); */
+    border-radius: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.image_container:hover::after{
+    background-color: var(--Cyan);
+    background-image: url('images/icon-view.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card__title {
+    font-size: 18px;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.card__title:hover {
+    color: var(--Cyan);
+}
+
+.card__text {
+    margin: 1rem 0;
+    color: var(--Soft-blue);
+}
+
+
+.card-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+
+.card-info p{
+    font-weight: 400;
+    color: var(--Soft-blue);
+}
+
+.card__name {
+    color: var(--Cyan);
+}
+
+.card__name, .card__date {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__name img, .card__date img {
+    margin-right: 0.5rem;
+}
+
+.card__author {
+    display: flex;
+    align-items: center;
+    padding-top: 0.8rem;
+}
+
+.card__author img {
+    width: 1.8rem;
+    border-radius: 50%;
+    border: 2px solid var(--White);
+    margin-right: 0.8rem;
+}
+
+.authur_name {
+    font-size: 13.5px;
+    color: var(--Soft-blue);
+}
+
+.authur_name span {
+    color: var(--White);
+    cursor: pointer;
+}
+
+.authur_name span:hover {
+    color: var(--Cyan);
+}
